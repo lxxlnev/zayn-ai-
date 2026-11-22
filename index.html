@@ -186,7 +186,7 @@ async function sendMessage(){
    throw new Error(data.error||"Ошибка сервера");
   }
 
-  const answer=data.answerdata.response"Нет ответа";
+  const answer=data.answer || data.response || "Нет ответа";
   addMessage(answer,"bot");
   statusBox.textContent=(data.mode||"STANDARD")+" · ГОТОВ";
   speak(answer);
