@@ -198,4 +198,12 @@ async function sendMessage(){
   send.disabled=false;
   input.focus();
  }
-}
+send.onklick=sendMessage;
+ input.addEventListener("keydown", e
+  => 
+    if (e.key === "Enter")
+      sendMessage();
+});
+</script>
+</body>
+</html>
